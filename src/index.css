@@ -2,16 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color:beige;
+}
 
 .navBar {
-  background-color: #f87171;
+  background-color: #124E78;;
   overflow: hidden;
   text-align: center;
 }
 
 .navBar a {
     float: left;
-    color: #78716c;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -25,7 +28,7 @@ color: black;
 
 .navBar a.active {
   background-color: #0A2E36;
-  color: white;
+  color: beige;
 }
 
 .row {
@@ -49,15 +52,10 @@ color: black;
 .col-25,
 .col-50,
 .col-75 {
-  padding: 0 15px;
+  padding: 20px 30px;
 }
 
-.container {
-  background-color: #f87171;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgray;
-  border-radius: 3px;
-}
+
 
 input[type=text] {
   width: 100%;
@@ -79,21 +77,6 @@ label {
   font-size: 24px;
 }
 
-.btn{
-    background-color:#f87171;
-      color: black;
-      padding: 12px;
-      margin: 10px 10px;
-      border: solid;
-      width: 50%;
-      border-radius: 3px;
-      cursor: pointer;
-      font-size: 17px;
-}
-
-.btn:hover {
-  background-color: #0A2E36;
-}
 
 span.price {
   float: right;
@@ -105,13 +88,13 @@ span.price {
     flex-direction:column-reverse
   }
   .col-25 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
 .cardContent {
   display:flex;
-  justify-content: center;
+  justify-content:space-around;
   
 }
 
@@ -119,4 +102,137 @@ span.price {
     width: 400px;
     height: 400px;
     margin: 10px;
+}
+
+.btn {
+  position:sticky;
+  color: black;
+  width: 50%;
+  border: solid 0.1rem;
+  border-radius: round;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: #124E78;
+}
+
+
+.h5{
+  display: flex;
+  justify-content: left;
+  margin: 1px;
+  padding: 1px;
+}
+
+.h1, h4{
+  color: black;
+  font-weight: bold;
+}
+
+.p{
+  display:flex;
+  justify-content:space-evenly;
+  color:black;
+  margin:1px;
+  padding: 2px;
+}
+
+input[type=text] {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+
+.hr {
+  width: 50%;
+}
+
+.checkoutDiv {
+  margin: 20px;
+}
+
+.card {
+  width: 18rem;
+  display: grid;
+  border: solid 0.1rem;
+  color: #124E78;
+  margin: 45px;
+}
+.divCard {
+  display: inline;
+  justify-content:right;
+  padding: 20px;
+  margin: 20px;
+}
+
+.directionCard {
+  display:grid;
+  justify-content: space-around;
+  
+}
+
+.div1{
+  float: right;
+}
+
+input[type="number"] {
+  width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.productCard {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+input[type="password"] {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.expiryData {
+    width: 60%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+}
+
+.price{
+  display: flex;
+    justify-content: space-evenly;
+    color: black;
+    margin: 1px;
+    padding: 2px;
+    font-size: larger;
+    font-style: italic;
+}
+
+.icon{
+  display: flex;
+  justify-content: space-around;
+  color: black;
+  font-size:larger;
+}
+
+.iconSocial{
+  width: 50%;
+  font-size: 15em;
+  display: flex;
+    justify-content: right;
+    
+    padding: 20px;
+    margin: 20px;
+    grid-row:auto;
+}
+
+.form{
+  margin: 10px;
+  padding: 10px;
 }

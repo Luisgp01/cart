@@ -1,8 +1,8 @@
 import "./App.css";
 import Checkout from "./Component/Checkout/Checkout";
+import Form from "./Component/Form/Form";
 import Navbar from "./Component/Navbar/Navbar";
 import Products from "./Component/Products/Products";
-
 
 function App() {
   return (
@@ -14,6 +14,9 @@ function App() {
       </div>
       <br />
       <div>
+        <Form />
+      </div>
+      <div className="checkoutDiv">
         <Checkout />
       </div>
     </div>
