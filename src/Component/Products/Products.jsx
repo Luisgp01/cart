@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "../../img/card.jpg";
 import "../../index.css";
 
 export default function CardHome() {
-  const [hover, setHover] = useState();
 
   const cardHome = [
     {
@@ -45,14 +44,6 @@ export default function CardHome() {
     e.preventDefault();
   };
 
-  const handleMouseIn = () => {
-    setHover(true);
-  };
-
-  const handleMouseOut = () => {
-    setHover(false);
-  };
-
   return (
     <div className="productCard">
       {cardHome.map((item, index) => (
@@ -72,8 +63,6 @@ export default function CardHome() {
                   onClick={(e) => {
                     onClick(e, item);
                   }}
-                  onMouseOver={handleMouseIn}
-                  onMouseOut={handleMouseOut}
                 >
                   {item.button}
                   <i className="fa-solid icon fa-cart-shopping"></i>
