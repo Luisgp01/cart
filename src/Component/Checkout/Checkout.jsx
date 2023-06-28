@@ -1,7 +1,8 @@
 import React from "react";
 import "../../index.css";
 import Button from "../Button/Button";
-import Payment from "../Payment/Payment";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faEnvelopeOpen, faCreditCard, faCalendarDays, faKey} from "@fortawesome/free-solid-svg-icons";
 
 export default function Checkout() {
   return (
@@ -11,6 +12,7 @@ export default function Checkout() {
       <div>
         <h4>Email address</h4>
         <input type="text" name="Email Address" placeholder="Email Address" />
+        <FontAwesomeIcon className="input-icon" icon={faEnvelopeOpen} />
       </div>
       <div>
         <h4>Credit Card Number</h4>
@@ -19,6 +21,7 @@ export default function Checkout() {
           name="Credit Details"
           placeholder="xxxx-xxxx-xxxx-xxxx"
         />
+        <FontAwesomeIcon className="input-icon" icon={faCreditCard} />
       </div>
       <div>
         <h4>Expiry Date</h4>
@@ -37,6 +40,7 @@ export default function Checkout() {
           <option value="11">November</option>
           <option value="12">December</option>
         </select>
+        <FontAwesomeIcon className="input-icon" icon={faCalendarDays} />
         <select name="expireYY" className="expiryData">
           <option value="">Year</option>
           <option value="23">2023</option>
@@ -46,13 +50,12 @@ export default function Checkout() {
           <option value="27">2027</option>
           <option value="28">2028</option>
         </select>
-      </div>
-      <div className="div1">
-        <Payment />
+        <FontAwesomeIcon className="input-icon" icon={faCalendarDays} />
       </div>
       <div>
         <h4>CVV</h4>
         <input type="password" name="CVV" placeholder="***" />
+        <FontAwesomeIcon className="input-icon" icon={faKey} />
       </div>
       <div>
         <input type="checkbox" name="promo" id="promo" /> I have promo!

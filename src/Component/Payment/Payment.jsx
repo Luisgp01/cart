@@ -1,23 +1,20 @@
 import React from "react";
 import "../../index.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default function Payment() {
   return (
-    <div className="div1">
+    <div className="iconSocial">
       <div>
-        <h1>Follow us</h1>
+        <FontAwesomeIcon className="icon" icon={faEnvelope} border />
       </div>
       <div>
-        <i className="fa-brands iconSocial fa-facebook"></i>
-        <i className="fa-brands iconSocial fa-twitter"></i>
-        <i className="fa-brands iconSocial fa-instagram"></i>
+        <FontAwesomeIcon className="icon" icon={faTwitter} border />
       </div>
       <div>
-        <ol>
-          <li>Discounts</li>
-          <li>Merchandise</li>
-          <li>Fair locations</li>
-        </ol>
+        <FontAwesomeIcon className="icon" icon={faInstagram} border />
       </div>
     </div>
   );

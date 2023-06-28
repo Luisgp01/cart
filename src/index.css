@@ -7,14 +7,14 @@ body {
 }
 
 .navBar {
-  background-color: #124E78;;
+  background-color: #124E78;
   overflow: hidden;
   text-align: center;
 }
 
 .navBar a {
     float: left;
-    color: black;
+    color: #9EA3B0;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -61,7 +61,7 @@ input[type=text] {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #9EA3B0;;
   border-radius: 3px;
 }
 
@@ -80,7 +80,7 @@ label {
 
 span.price {
   float: right;
-  color: gray;
+  color: #9EA3B0;;
 }
 
 @media (max-width: 800px) {
@@ -106,14 +106,14 @@ span.price {
 
 .btn {
   position:sticky;
-  color: black;
+  color: #9EA3B0;
   width: 50%;
   border: solid 0.1rem;
   border-radius: round;
   margin: 0.5rem;
   padding: 0.5rem;
   display: flex;
-  justify-content: center;
+  justify-content:center;
   background-color: #124E78;
 }
 
@@ -123,17 +123,18 @@ span.price {
   justify-content: left;
   margin: 1px;
   padding: 1px;
+  color: #9EA3B0;
 }
 
 .h1, h4{
-  color: black;
+  color: #9EA3B0;
   font-weight: bold;
 }
 
 .p{
   display:flex;
   justify-content:space-evenly;
-  color:black;
+  color:#9EA3B0;
   margin:1px;
   padding: 2px;
 }
@@ -155,10 +156,10 @@ input[type=text] {
 }
 
 .card {
-  width: 18rem;
+  width: 20rem;
   display: grid;
   border: solid 0.1rem;
-  color: #124E78;
+  color: #9EA3B0;
   margin: 45px;
 }
 .divCard {
@@ -188,6 +189,7 @@ input[type="number"] {
 .productCard {
   display: flex;
   justify-content: space-evenly;
+    box-shadow: 200rem;
 }
 
 input[type="password"] {
@@ -216,23 +218,48 @@ input[type="password"] {
 
 .icon{
   display: flex;
-  justify-content: space-around;
-  color: black;
-  font-size:larger;
+  justify-content:space-evenly;
+  color: #124E78;
+  font-size: 12px;
+  position:static;
 }
 
 .iconSocial{
   width: 50%;
   font-size: 15em;
   display: flex;
-    justify-content: right;
+    justify-content:space-evenly;
+    padding: 40px;
+    margin: 40px;
+    float: right;
     
-    padding: 20px;
-    margin: 20px;
-    grid-row:auto;
 }
 
 .form{
   margin: 10px;
   padding: 10px;
+}
+
+.cardButton {
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.formDiv {
+  margin: 10rem;
+  margin-top: 1rem;
+}
+.iconDirection{
+float: left;
+}
+
+.input-icon {
+  position:absolute;
+  left: 60rem;
+  transform: translateY(150%);
+  color: #124E78;
+}
+
+input {
+  padding-left: 30px;
 }

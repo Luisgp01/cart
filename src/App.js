@@ -1,4 +1,4 @@
-import "./App.css";
+import "./index.css";
 import Checkout from "./Component/Checkout/Checkout";
 import Form from "./Component/Form/Form";
 import Navbar from "./Component/Navbar/Navbar";
@@ -13,6 +13,7 @@ function App() {
         <Products />
       </div>
       <br />
+
       <div>
         <Form />
       </div>

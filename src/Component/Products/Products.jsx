@@ -64,8 +64,10 @@ export default function CardHome() {
                     onClick(e, item);
                   }}
                 >
+                  <div className="cardButton">
                   {item.button}
                   <i className="fa-solid icon fa-cart-shopping"></i>
+                  </div>
                 </a>
               </div>
             </div>
