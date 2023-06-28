@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 body {
   background-color:beige;
 }
@@ -254,12 +256,17 @@ float: left;
 }
 
 .input-icon {
-  position:absolute;
-  left: 60rem;
+  position: relative;
+  right:35px;
+  bottom:25px;
   transform: translateY(150%);
   color: #124E78;
 }
 
 input {
   padding-left: 30px;
+}
+
+.container {
+  position: relative;
 }
