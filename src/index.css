@@ -6,6 +6,7 @@
 
 body {
   background-color:beige;
+  position: absolute;
 }
 
 .navBar {
@@ -85,15 +86,6 @@ span.price {
   color: #9EA3B0;;
 }
 
-@media (max-width: 800px) {
-  .row{
-    flex-direction:column-reverse
-  }
-  .col-25 {
-    margin-bottom: 10px;
-  }
-}
-
 .cardContent {
   display:flex;
   justify-content:space-around;
@@ -117,6 +109,10 @@ span.price {
   display: flex;
   justify-content:center;
   background-color: #124E78;
+}
+
+.btn:hover{
+  background-color: #4867b4;
 }
 
 
@@ -158,11 +154,12 @@ input[type=text] {
 }
 
 .card {
-  width: 20rem;
+  width: 18rem;
   display: grid;
-  border: solid 0.1rem;
   color: #9EA3B0;
   margin: 45px;
+  border: solid 1px;
+ 
 }
 .divCard {
   display: inline;
@@ -174,7 +171,6 @@ input[type=text] {
 .directionCard {
   display:grid;
   justify-content: space-around;
-  
 }
 
 .div1{
@@ -191,7 +187,7 @@ input[type="number"] {
 .productCard {
   display: flex;
   justify-content: space-evenly;
-    box-shadow: 200rem;
+  
 }
 
 input[type="password"] {
@@ -206,16 +202,17 @@ input[type="password"] {
       padding: 12px 20px;
       margin: 8px 0;
       box-sizing: border-box;
+  
 }
 
 .price{
   display: flex;
-    justify-content: space-evenly;
-    color: black;
+    justify-content: Left;
+    color: #525b72;
     margin: 1px;
-    padding: 2px;
-    font-size: larger;
-    font-style: italic;
+    padding: 10px;
+    font-size: 2rem;
+    font-family: Impact;
 }
 
 .icon{
@@ -223,18 +220,9 @@ input[type="password"] {
   justify-content:space-evenly;
   color: #124E78;
   font-size: 12px;
-  position:static;
-}
-
-.iconSocial{
-  width: 50%;
-  font-size: 15em;
-  display: flex;
-    justify-content:space-evenly;
-    padding: 40px;
-    margin: 40px;
-    float: right;
-    
+  position:relative;
+  left:20rem;
+  bottom: 20rem;;
 }
 
 .form{
@@ -269,4 +257,74 @@ input {
 
 .container {
   position: relative;
+  left: 10rem;
+}
+
+@media screen and (mad-width:600px) {
+    h5,h4,h1,p,.card{
+      font-size: 36px;
+      line-height: 50px;
+    }
+}
+
+.btnStyle {
+  width: 50%;
+    border: solid 0.1rem;
+    border-radius: round;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    background-color: #124E78;
+      box-shadow: 200px;
+}
+.btnStyle:hover {
+  background-color: #9EA3B0;
+}
+
+.btnDir{
+  position: relative;
+ left:65px;
+top:0.3rem;
+}
+
+.cart{
+  position: relative;
+  top:0.3rem;
+  left: 3px;
+}
+
+.title{
+  font-size: 1.7rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #525b72;
+  text-decoration:double;
+  position: relative;
+  margin: 20px;
+}
+
+.text {
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #124E78;
+}
+
+.divSubcribe{
+  position: relative;
+  left: 100rem;
+  bottom: 50rem;
+  margin: -20px;
+}
+
+
+.cards {
+  display: flex;
+  justify-content: left;
+  width: 35rem;
+  color: #124E78;
+  margin: 45px;
+  padding: -10rem;
+  position: relative;
+  bottom: 65.7rem;
+  left: 54.5rem;
 }

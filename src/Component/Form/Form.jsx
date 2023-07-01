@@ -7,9 +7,11 @@ import {
   faMobileScreen,
 } from "@fortawesome/free-solid-svg-icons";
 
+
+
 export default function Form() {
   return (
-    <div className="form">
+    <div className="checkoutDiv">
       <h1 className="h1">Buyer Information</h1>
       <br />
       <div>

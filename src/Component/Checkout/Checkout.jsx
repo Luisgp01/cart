@@ -6,7 +6,7 @@ import {faEnvelopeOpen, faCreditCard, faCalendarDays, faKey} from "@fortawesome/
 
 export default function Checkout() {
   return (
-    <div>
+    <div className="checkoutDiv">
       <h1 className="h1">Payment Details</h1>
       <br />
       <div>
