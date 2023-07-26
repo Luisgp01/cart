@@ -57,8 +57,8 @@ export default function CardHome() {
           <img src={Image3} alt="/" />
           <div>
             <div className="title">
-             <span> {item.titulo}</span>
-              <div className="text">
+             <span className="text-grey text-3xl font-bold"> {item.titulo}</span>
+              <div className="text-black text-sm ">
                 {item.texto}
                 <div className="price">{item.price}</div>
                 <a

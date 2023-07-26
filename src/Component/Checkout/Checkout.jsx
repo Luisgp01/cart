@@ -2,7 +2,12 @@ import React from "react";
 import "../../index.css";
 import Button from "../Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faEnvelopeOpen, faCreditCard, faCalendarDays, faKey} from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelopeOpen,
+  faCreditCard,
+  faCalendarDays,
+  faKey,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Checkout() {
   return (
