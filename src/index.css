@@ -93,7 +93,7 @@ input[type=text] {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
-  border: 1px solid #9EA3B0;;
+  border: 1px  #9EA3B0;;
   border-radius: 3px;
 }
 
@@ -403,44 +403,74 @@ body.active-modal {
 }
 
 .modal-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  background-color: #fff1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
 }
 
 button {
   cursor: pointer;
 }
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.modal-container{
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left:0;
-  width: 100%;
-  height:100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
-.modal-content {
-  background-color: #004654;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  max-width: 400px;
-  width: 90%;
+.modal-btn {
+  position: relative;
+  padding: 0.1rem;
+  margin: 0.4rem;
+  border-radius: 4rem;
 }
 
+.modal-btn:hover{
+  color: black
+}
+
+.modal-title{
+  color: #4867b4;
+  font-size: large;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.input-email{
+      width: 60%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+}
+.span-text{
+  color: #76819c;
+}
+
+.icon-navbar{
+  position: relative;
+  left: 0.4rem;
+  font-size: 1rem;
+}
+
+.icon-modal{
+  position: relative;
+  right: 1.6rem;
+  font-size: 1rem;
+  color:#124E78
+}
+
+.icon-button{
+  color: #9EA3B0;
+  position:relative;
+  top:0.3rem;
+  left: 0.2rem;
+}

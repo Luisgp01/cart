@@ -42,6 +42,11 @@ function App() {
     setIsContactModalOpen(false)
   }
 
+   const toggleModal = () => {
+     setIsLoginModalOpen(!isLoginModalOpen);
+     setIsRegisterModalOpen(!isRegisterModalOpen);
+   };
+
 
   return (
     <div className="flex-center">
@@ -50,10 +55,15 @@ function App() {
         openRegisterModal={openRegisterModal}
         openContactModal={openContactModal}
       />
-      <LoginModal isOpen={isLoginModalOpen} closeModal={closeLoginModal} />
+      <LoginModal
+        isOpen={isLoginModalOpen}
+        closeModal={closeLoginModal}
+        toggleModal={toggleModal}
+      />
       <RegisterModal
         isOpen={isRegisterModalOpen}
         closeModal={closeRegisterModal}
+        toggleModal={toggleModal}
       />
       {
         <ContactModal

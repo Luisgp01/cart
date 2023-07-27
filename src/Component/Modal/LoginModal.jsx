@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import "../../index.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faRightToBracket,
+  faUsers,
+  faKey,
+  faXmark
+} from "@fortawesome/free-solid-svg-icons";
 
-const LoginModal = ({ isOpen, closeModal, props }) => {
+const LoginModal = ({ isOpen, closeModal, props, toggleModal }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -19,9 +26,20 @@ const LoginModal = ({ isOpen, closeModal, props }) => {
   };
 
   return (
-    <Modal isOpen={isOpen} onRequestClose={closeModal}>
-      <div className="modal-content">
-        <h2>Login</h2>
+    <Modal
+      className={"modal-content"}
+      isOpen={isOpen}
+      onRequestClose={closeModal}
+    >
+      <div>
+        <h2 className="modal-title">Login</h2>
+        <span className="span-text">
+          not registered, yet?{" "}
+          <strong>
+            {" "}
+            <button onClick={toggleModal}>Register now</button>
+          </strong>
+        </span>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -29,19 +47,26 @@ const LoginModal = ({ isOpen, closeModal, props }) => {
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Username"
           />
+          <FontAwesomeIcon className="icon-modal" icon={faUsers} />
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
           />
-          <button type="submit">Login</button>
-          <button onClick={closeModal}>Close</button>
+          <FontAwesomeIcon className="icon-modal" icon={faKey} />
+          <div className="modal-btn btn">
+            <button type="submit">Login</button>
+            <FontAwesomeIcon className="icon-button" icon={faRightToBracket} />
+          </div>
+          <div className="modal-btn btn">
+            <button onClick={closeModal}>Close</button>
+            <FontAwesomeIcon className="icon-button" icon={faXmark} />
+          </div>
         </form>
       </div>
     </Modal>
   );
 };
-
 
 export default LoginModal;
