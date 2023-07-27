@@ -10,12 +10,14 @@ import Modal from "./Component/Modal/Modal";
 import LoginModal from "./Component/Modal/LoginModal";
 import RegisterModal from "./Component/Modal/RegisterModal";
 import React, { useState } from "react";
+import ContactModal from "./Component/Modal/ContactModal";
 
 
 function App() {
 
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const openLoginModal = () => {
     setIsLoginModalOpen(true);
@@ -23,6 +25,9 @@ function App() {
 
   const openRegisterModal = () => {
     setIsRegisterModalOpen(true);
+  };
+  const openContactModal = () => {
+    setIsContactModalOpen(true);
   };
 
   const closeLoginModal = () => {
@@ -33,18 +38,29 @@ function App() {
     setIsRegisterModalOpen(false);
   };
 
+  const closeContactModal = () => {
+    setIsContactModalOpen(false)
+  }
+
 
   return (
     <div className="flex-center">
       <Modal
         openLoginModal={openLoginModal}
         openRegisterModal={openRegisterModal}
+        openContactModal={openContactModal}
       />
       <LoginModal isOpen={isLoginModalOpen} closeModal={closeLoginModal} />
       <RegisterModal
         isOpen={isRegisterModalOpen}
         closeModal={closeRegisterModal}
       />
+      {
+        <ContactModal
+          isOpen={isContactModalOpen}
+          closeModal={closeContactModal}
+        />
+      }
       <br />
       <div>
         <Gallery />
