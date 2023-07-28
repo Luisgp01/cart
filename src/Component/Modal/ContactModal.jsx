@@ -42,6 +42,7 @@ const ContactModal = ({ isOpen, closeModal }) => {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Your Email"
           />
+          <FontAwesomeIcon className="icon-modal" icon={faEnvelope} />
           <div>
             <button className="modal-btn btn" type="submit">
               Send
