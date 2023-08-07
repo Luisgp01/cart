@@ -1,35 +1,35 @@
 import React from "react";
-import Image from '../../img/card2.jpg'
+import Image from '../../img/subscribe.jpg'
 
 export default function CardInfo() {
     const cardData = [
       {
         button: "",
         image: { Image },
-        title: "Noteworthy technology acquisitions 2021",
-        text: " Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+        title: "Noteworthy technology acquisitions 2023",
+        text: " Here are the biggest enterprise technology acquisitions of 2023 so far, in reverse chronological order.",
       },
       {
         button: "",
         image: { Image },
-        title: "Noteworthy technology acquisitions 2021",
-        text: " Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+        title: "Noteworthy company technology mergers  2023",
+        text: " Here are the biggest enterprise technology mergers of 2023 so far, in reverse chronological order.",
       },
       {
         button: "",
         image: { Image },
-        title: "Noteworthy technology acquisitions 2021",
-        text: " Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+        title: "Noteworthy technology banned 2023",
+        text: " Here are the biggest downfall of enterprises technology bankrupcy 2023 so far, in reverse chronological order.",
       },
     ];
 
   return (
-    <div>
+    <div className="cardInfo">
       {cardData.map((item, index) => (
         <div key={index}>
           <a
             href="/"
-            className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+            className="flex flex-col items-center-sm bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
           >
             <img
               className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-28 md:rounded-none md:rounded-l-lg"

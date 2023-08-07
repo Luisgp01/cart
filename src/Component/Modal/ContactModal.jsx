@@ -28,15 +28,10 @@ const ContactModal = ({ isOpen, closeModal }) => {
     >
       <div>
         <h2 className="modal-title">Contact Us</h2>
-
-        <span className="span-text">
-          Send us your email to contact you in case of <strong>problem</strong>
-        </span>
-
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            className="input-email"
+            className="input-email modalInput"
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -49,13 +44,16 @@ const ContactModal = ({ isOpen, closeModal }) => {
               <FontAwesomeIcon className="icon-button" icon={faEnvelope} />
             </button>
           </div>
-          <div>
+          <div className="btnModal">
             <button className="modal-btn btn" onClick={closeModal}>
               Close
               <FontAwesomeIcon className="icon-button" icon={faXmark} />
             </button>
           </div>
         </form>
+        <span className="span-text spanText">
+          Send us your email to contact you in case of <strong>problem</strong>
+        </span>
       </div>
     </Modal>
   );

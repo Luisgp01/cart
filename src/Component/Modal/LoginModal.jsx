@@ -9,6 +9,8 @@ import {
   faXmark
 } from "@fortawesome/free-solid-svg-icons";
 
+import Image4 from "../../img/loginModal1.png";
+
 const LoginModal = ({ isOpen, closeModal, props, toggleModal }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -33,15 +35,9 @@ const LoginModal = ({ isOpen, closeModal, props, toggleModal }) => {
     >
       <div>
         <h2 className="modal-title">Login</h2>
-        <span className="span-text">
-          not registered, yet?{" "}
-          <strong>
-            {" "}
-            <button onClick={toggleModal}>Register now</button>
-          </strong>
-        </span>
         <form onSubmit={handleSubmit}>
           <input
+            className="modalInput"
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -49,6 +45,7 @@ const LoginModal = ({ isOpen, closeModal, props, toggleModal }) => {
           />
           <FontAwesomeIcon className="icon-modal" icon={faUsers} />
           <input
+            className="modalInput"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -59,11 +56,21 @@ const LoginModal = ({ isOpen, closeModal, props, toggleModal }) => {
             <button type="submit">Login</button>
             <FontAwesomeIcon className="icon-button" icon={faRightToBracket} />
           </div>
-          <div className="modal-btn btn">
-            <button onClick={closeModal}>Close</button>
-            <FontAwesomeIcon className="icon-button" icon={faXmark} />
+          <div className="btnModal">
+            <button className="modal-btn btn" onClick={closeModal}>
+              Close
+            </button>
+            <FontAwesomeIcon className="iconbuttonLogin" icon={faXmark} />
           </div>
         </form>
+        <span className="span-text">
+          not registered, yet?{" "}
+          <strong>
+            {" "}
+            <button onClick={toggleModal}>Register now</button>
+          </strong>
+        </span>
+        <img className="modalImg" src={Image4} alt="login" />
       </div>
     </Modal>
   );

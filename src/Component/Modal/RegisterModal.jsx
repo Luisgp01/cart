@@ -38,23 +38,17 @@ const RegisterModal = ({ isOpen, closeModal, props, toggleModal }) => {
     >
       <div>
         <h2 className="modal-title">Register</h2>
-        <span className="span-text">
-          Already registered?{" "}
-          <strong>
-            {" "}
-            <button onClick={toggleModal}>Login</button>
-          </strong>
-        </span>
         <form onSubmit={handleSubmit}>
           <input
             type="email"
-            className="input-email"
+            className="input-email modalInput"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
           />
           <FontAwesomeIcon className="icon-modal" icon={faEnvelope} />
           <input
+            className="modalInput"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -62,6 +56,7 @@ const RegisterModal = ({ isOpen, closeModal, props, toggleModal }) => {
           />
           <FontAwesomeIcon className="icon-modal" icon={faKey} />
           <input
+            className="modalInput"
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -72,13 +67,20 @@ const RegisterModal = ({ isOpen, closeModal, props, toggleModal }) => {
             <button type="submit">Register</button>
             <FontAwesomeIcon className="icon-button" icon={faAddressCard} />
           </div>
-          <div>
+          <div className="btnModal">
             <button className="modal-btn btn" onClick={closeModal}>
               Close
               <FontAwesomeIcon className="icon-button" icon={faXmark} />
             </button>
           </div>
         </form>
+        <span className="span-text spanText">
+          Already registered?{" "}
+          <strong>
+            {" "}
+            <button onClick={toggleModal}>Login</button>
+          </strong>
+        </span>
       </div>
     </Modal>
   );
