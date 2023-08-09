@@ -6,17 +6,17 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import Picture from "../../img/card2.jpg";
 import Image3 from "../../img/card3.jpg";
 import Image4 from "../../img/card4.jpg";
+import ProductList from "./ProductList";
 
 
 
-export default function CardHome({ handleCount }) {
-  
- const [showAlert, setShowAlert] = useState(false);
 
-
+export default function CardHome({ handleCount, addToCart, handleAddToCart }) {
+  const [showAlert, setShowAlert] = useState(false);
 
   const cardHome = [
     {
+      id: 1,
       titulo: "Headphones",
       texto:
         "Quisque dictum tincidunt interdum. Vestibulum maximus lacus sit amet libero semper porta. Vestibulum vitae massa tellus. Duis ultrices sagittis porta. Morbi quis ligula ante",
@@ -25,6 +25,7 @@ export default function CardHome({ handleCount }) {
       price: "€11.50",
     },
     {
+      id: 2,
       titulo: "Asus",
       texto:
         "Quisque dictum tincidunt interdum. Vestibulum maximus lacus sit amet libero semper porta. Vestibulum vitae massa tellus. Duis ultrices sagittis porta. Morbi quis ligula ante",
@@ -34,6 +35,7 @@ export default function CardHome({ handleCount }) {
     },
 
     {
+      id: 3,
       titulo: "Mouse",
       texto:
         "Quisque dictum tincidunt interdum. Vestibulum maximus lacus sit amet libero semper porta. Vestibulum vitae massa tellus. Duis ultrices sagittis porta. Morbi quis ligula ante",
@@ -42,6 +44,7 @@ export default function CardHome({ handleCount }) {
       price: "€12.00",
     },
     {
+      id: 4,
       titulo: "iPAD",
       texto:
         "Quisque dictum tincidunt interdum. Vestibulum maximus lacus sit amet libero semper porta. Vestibulum vitae massa tellus. Duis ultrices sagittis porta. Morbi quis ligula ante",
@@ -54,8 +57,9 @@ export default function CardHome({ handleCount }) {
   const onClick = (e, item) => {
     e.preventDefault();
     handleCount();
-       alert("Item added to cart!");
-       setShowAlert(true);
+    alert("Item added to cart!");
+    setShowAlert(true);
+    handleAddToCart(item);
   };
 
   return (
@@ -76,7 +80,7 @@ export default function CardHome({ handleCount }) {
                   href="/"
                   className="btn btnDir text-button-card"
                   onClick={(e) => {
-                    onClick(e, item);
+                    onClick(e, item, addToCart);
                   }}
                 >
                   {item.button}

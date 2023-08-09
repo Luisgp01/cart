@@ -1,6 +1,4 @@
-import Checkout from "../Component/Checkout/Checkout";
-import Form from "../Component/Form/Form";
-import Products from "../Component/Products/Products";
+import Products from "../Component/Products/Product";
 import Footer from "../Component/Footer/Footer";
 import Gallery from "../Component/Gallery/Gallery";
 import CardInfo from "../Component/Card/CardInfo";
@@ -9,17 +7,15 @@ import LoginModal from "../Component/Modal/LoginModal";
 import RegisterModal from "../Component/Modal/RegisterModal";
 import React, { useState } from "react";
 import ContactModal from "../Component/Modal/ContactModal";
-import Accordion from "../Component/Alert/Alert";
-import Alert from "../Component/Alert/Alert";
-
 
 function HomePage() {
+
+  const [cartItems, setCartItems] = useState([]);
   const [cartCount, addCartCount] = useState(0);
 
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
-
 
   const openLoginModal = () => {
     setIsLoginModalOpen(true);
@@ -53,7 +49,9 @@ function HomePage() {
     addCartCount(cartCount + 1);
   };
 
-  
+   const handleAddToCart = (product) => {
+     setCartItems([...cartItems, product]);
+   };
 
   return (
     <div>
@@ -85,7 +83,7 @@ function HomePage() {
       </div>
       <br />
       <div>
-        <Products handleCount={handleCount} />
+        <Products handleCount={handleCount} handleAddToCart={handleAddToCart} />
       </div>
       <div className="cardin">
         <CardInfo />
