@@ -6,12 +6,12 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import Picture from "../../img/card2.jpg";
 import Image3 from "../../img/card3.jpg";
 import Image4 from "../../img/card4.jpg";
-import ProductList from "./ProductList";
 
 
 
 
-export default function CardHome({ handleCount, addToCart, handleAddToCart }) {
+
+export default function CardHome({ handleCount, handleAddToCart }) {
   const [showAlert, setShowAlert] = useState(false);
 
   const cardHome = [
@@ -80,7 +80,8 @@ export default function CardHome({ handleCount, addToCart, handleAddToCart }) {
                   href="/"
                   className="btn btnDir text-button-card"
                   onClick={(e) => {
-                    onClick(e, item, addToCart);
+                    onClick(e, item);
+                    handleAddToCart(item);
                   }}
                 >
                   {item.button}

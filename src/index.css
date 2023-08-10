@@ -662,3 +662,21 @@ top:2rem;
 .product-card .fa-cart-shopping {
   margin-left: 5px;
 }
+
+.cart-title {
+  font-size: 2rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  justify-content:center;
+  display: flex;
+  color: #0A2E36;
+}
+
+.cart-titles {
+  font-size: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  justify-content:space-around;
+  display: flex;
+  color: #0A2E36;
+}

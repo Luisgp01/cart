@@ -49,8 +49,8 @@ function HomePage() {
     addCartCount(cartCount + 1);
   };
 
-   const handleAddToCart = (product) => {
-     setCartItems([...cartItems, product]);
+   const handleAddToCart = (item) => {
+     setCartItems([...cartItems, item]);
    };
 
   return (

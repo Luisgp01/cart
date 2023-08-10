@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CartItem = (item, removeFromCart) => {
+const CartItem = ({ item, removeFromCart }) => {
     return (
         <div>
             <h4>{item.name}</h4>
