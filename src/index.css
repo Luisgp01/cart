@@ -576,7 +576,40 @@ top:2rem;
 
 .modalImg{
   position: relative;
-  bottom: 3rem;
+  width: 60%;
+  height: 10%;
+  bottom: 4rem;
+  left: 3.8rem;
+  box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.645);
+}
+.modalImg:hover{
+    box-shadow: 0 4px 5px rgba(2, 38, 77, 0.71);
+}
+
+.modal-icon-img {
+  position: relative;
+  width: 60%;
+  bottom: 2.3rem;
+  left: 9rem;
+  color: #0A2E36;
+  font-size: 4rem;
+}
+.modal-icon-img1 {
+  position: relative;
+  width: 60%;
+  bottom: 7rem;
+  right:-2rem;
+  color: #0A2E36;
+  font-size: 4rem;
+  display: flex;
+}
+.modal-icon-img2 {
+  position: relative;
+  width: 60%;
+  top:-12.1rem;
+  left:18rem;
+  color: #0A2E36;
+  font-size: 4rem;
 }
 
 .cart-container {

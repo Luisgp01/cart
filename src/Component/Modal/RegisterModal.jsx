@@ -7,9 +7,11 @@ import {
   faKey,
   faUsers,
   faXmark,
-  faAddressCard
+  faAddressCard,
+  faLaptop,
+  faMobileScreenButton,
+  faUniversalAccess,
 } from "@fortawesome/free-solid-svg-icons";
-
 
 const RegisterModal = ({ isOpen, closeModal, props, toggleModal }) => {
   const [username, setUsername] = useState("");
@@ -81,6 +83,15 @@ const RegisterModal = ({ isOpen, closeModal, props, toggleModal }) => {
             <button onClick={toggleModal}>Login</button>
           </strong>
         </span>
+      </div>
+      <div className="modal-icon-img">
+        <FontAwesomeIcon icon={faLaptop} />
+      </div>
+      <div className="modal-icon-img1">
+        <FontAwesomeIcon icon={faMobileScreenButton} />
+      </div>
+      <div className="modal-icon-img2">
+        <FontAwesomeIcon icon={faUniversalAccess} />
       </div>
     </Modal>
   );
