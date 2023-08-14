@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 
-const CartItem = ({ item, removeFromCart }) => {
-    return (
-        <div>
-            <h4>{item.name}</h4>
-            <p>Price: ${item.price}</p>
-            <button onClick={() => removeFromCart(item.id)}>Remove</button>
-        </div>
-    );
+const CartItem = ({ product, removeFromCart, addToCart }) => {
+  return (
+    <div>
+      <h4>{product.name}</h4>
+      <p>Price: ${product.price}</p>
+      <button onClick={() => removeFromCart(product.id)}>Remove</button>
+      <button onClick={() => addToCart(product)}>Add to Cart</button>{" "}
+    </div>
+  );
 };
 
 export default CartItem;

@@ -11,7 +11,7 @@ import Image4 from "../../img/card4.jpg";
 
 
 
-export default function CardHome({ handleCount, handleAddToCart }) {
+export default function CardHome({ handleCount, addToCart }) {
   const [showAlert, setShowAlert] = useState(false);
 
   const cardHome = [
@@ -59,8 +59,10 @@ export default function CardHome({ handleCount, handleAddToCart }) {
     handleCount();
     alert("Item added to cart!");
     setShowAlert(true);
-    handleAddToCart(item);
+    addToCart(item);
   };
+
+ 
 
   return (
     <div className="productCard">
@@ -81,7 +83,6 @@ export default function CardHome({ handleCount, handleAddToCart }) {
                   className="btn btnDir text-button-card"
                   onClick={(e) => {
                     onClick(e, item);
-                    handleAddToCart(item);
                   }}
                 >
                   {item.button}

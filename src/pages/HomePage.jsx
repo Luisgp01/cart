@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Products from "../Component/Products/Product";
 import Footer from "../Component/Footer/Footer";
 import Gallery from "../Component/Gallery/Gallery";
@@ -5,11 +6,9 @@ import CardInfo from "../Component/Card/CardInfo";
 import Modal from "../Component/Modal/Modal";
 import LoginModal from "../Component/Modal/LoginModal";
 import RegisterModal from "../Component/Modal/RegisterModal";
-import React, { useState } from "react";
 import ContactModal from "../Component/Modal/ContactModal";
 
 function HomePage() {
-
   const [cartItems, setCartItems] = useState([]);
   const [cartCount, addCartCount] = useState(0);
 
@@ -24,6 +23,7 @@ function HomePage() {
   const openRegisterModal = () => {
     setIsRegisterModalOpen(true);
   };
+
   const openContactModal = () => {
     setIsContactModalOpen(true);
   };
@@ -49,10 +49,6 @@ function HomePage() {
     addCartCount(cartCount + 1);
   };
 
-   const handleAddToCart = (item) => {
-     setCartItems([...cartItems, item]);
-   };
-
   return (
     <div>
       <Modal
@@ -71,19 +67,17 @@ function HomePage() {
         closeModal={closeRegisterModal}
         toggleModal={toggleModal}
       />
-      {
-        <ContactModal
-          isOpen={isContactModalOpen}
-          closeModal={closeContactModal}
-        />
-      }
+      <ContactModal
+        isOpen={isContactModalOpen}
+        closeModal={closeContactModal}
+      />
       <br />
       <div>
         <Gallery />
       </div>
       <br />
       <div>
-        <Products handleCount={handleCount} handleAddToCart={handleAddToCart} />
+        <Products handleCount={handleCount} />
       </div>
       <div className="cardin">
         <CardInfo />
