@@ -9,7 +9,7 @@ import RegisterModal from "../Component/Modal/RegisterModal";
 import ContactModal from "../Component/Modal/ContactModal";
 
 function HomePage() {
-  const [cartItems, setCartItems] = useState([]);
+
   const [cartCount, addCartCount] = useState(0);
 
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -49,6 +49,11 @@ function HomePage() {
     addCartCount(cartCount + 1);
   };
 
+  const addToCart = () => {
+    addCartCount(addToCart + 1);
+  }
+
+
   return (
     <div>
       <Modal
@@ -77,7 +82,7 @@ function HomePage() {
       </div>
       <br />
       <div>
-        <Products handleCount={handleCount} />
+        / <Products handleCount={handleCount} addToCart={addToCart} />
       </div>
       <div className="cardin">
         <CardInfo />

@@ -1,7 +1,8 @@
 import React from "react";
 import CartItem from "./CartItem";
 
-const Cart = ({ cartItems, removeFromCart, handleAddToCart }) => {
+
+const Cart = ({ cartItems, removeFromCart, handleAddToCart, products }) => {
   return (
     <div>
       <h2 className="cart-title">Shop Cart</h2>
@@ -10,6 +11,7 @@ const Cart = ({ cartItems, removeFromCart, handleAddToCart }) => {
           <CartItem
             key={item.id}
             item={item}
+            products={products}
             removeFromCart={removeFromCart}
             handleAddToCart={handleAddToCart}
           />

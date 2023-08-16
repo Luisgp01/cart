@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Image from "../../img/card.jpg";
 import "../../index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,8 +11,7 @@ import Image4 from "../../img/card4.jpg";
 
 
 
-export default function CardHome({ handleCount, handleAddToCart }) {
-  const [showAlert, setShowAlert] = useState(false);
+export default function Product({ handleCount, handleAddToCart }) {
 
   const cardHome = [
     {
@@ -54,19 +53,17 @@ export default function CardHome({ handleCount, handleAddToCart }) {
     },
   ];
 
-  const onClick = (e, item) => {
-    e.preventDefault();
+  const handleOnClick = (item) => {
+    console.log(item)
     handleCount();
-    alert("Item added to cart!");
-    setShowAlert(true);
-    handleAddToCart(handleAddToCart);
+    handleAddToCart();
   };
 
   return (
     <div className="productCard">
       {cardHome.map((item, index) => (
         <div key={index} className="card  m-5">
-          <img src={item.image} alt="/" />
+          <img src={item.image} alt="" />
           <div>
             <div className="title">
               <span className="text-grey text-3xl font-bold">
@@ -79,10 +76,7 @@ export default function CardHome({ handleCount, handleAddToCart }) {
                 <a
                   href="/"
                   className="btn btnDir text-button-card"
-                  onClick={(e) => {
-                    onClick(e, item);
-                    handleAddToCart(handleAddToCart);
-                  }}
+                  onClick={() => handleOnClick(item)}
                 >
                   {item.button}
                   <FontAwesomeIcon
