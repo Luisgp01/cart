@@ -4,6 +4,7 @@ import "../../index.css";
 import {
   faXmark,
   faEnvelope,
+  faInbox
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -27,7 +28,9 @@ const ContactModal = ({ isOpen, closeModal }) => {
       onRequestClose={closeModal}
     >
       <div>
-        <h2 className="modal-title">Contact Us</h2>
+        <FontAwesomeIcon className="contactImg" icon={faInbox} />
+      </div>
+      <div>
         <form onSubmit={handleSubmit}>
           <input
             type="text"

@@ -6,10 +6,12 @@ import {
   faRightToBracket,
   faUsers,
   faKey,
-  faXmark
+  faXmark,
+  faUser
 } from "@fortawesome/free-solid-svg-icons";
 
-import Image4 from "../../img/loginModal1.png";
+import Avatar from '../../img/avatar.png'
+
 
 const LoginModal = ({ isOpen, closeModal, props, toggleModal }) => {
   const [username, setUsername] = useState("");
@@ -34,7 +36,9 @@ const LoginModal = ({ isOpen, closeModal, props, toggleModal }) => {
       onRequestClose={closeModal}
     >
       <div>
-        <h2 className="modal-title">Login</h2>
+        <FontAwesomeIcon className="avatarImg " icon={faUser} />
+      </div>
+      <div>
         <form onSubmit={handleSubmit}>
           <input
             className="modalInput"
@@ -70,7 +74,6 @@ const LoginModal = ({ isOpen, closeModal, props, toggleModal }) => {
             <button onClick={toggleModal}>Register now</button>
           </strong>
         </span>
-        <img className="modalImg" src={Image4} alt="login" />
       </div>
     </Modal>
   );

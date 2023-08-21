@@ -82,11 +82,15 @@ function HomePage() {
       </div>
       <br />
       <div>
-        / <Products handleCount={handleCount} addToCart={addToCart} />
+        <h5 className="flash">Rapid Sales</h5>
+        <hr />
+        <Products handleCount={handleCount} addToCart={addToCart} />
       </div>
+      <hr />
       <div className="cardin">
-        <CardInfo />
+        <CardInfo className="absolute" />
       </div>
+
       <br />
       <br />
       <Footer />
