@@ -9,11 +9,13 @@ const CartItem = ({ item, removeFromCart, products }) => {
 
   return (
     <div>
+      <div className="cartImg">
       <img src={product.image} alt="" />
-      <h5>{item.name}</h5>
-      <p>Price: ${item.price}</p>
-      <button className="button-remove" onClick={() => removeFromCart(item.id)}>
-        <p className="btn-remove-text">Remove</p><FontAwesomeIcon className="icon-button-remove" icon={faXmark} />
+      </div>
+      <h5 className="cartText">{item.name}</h5>
+      <p className="cartText">Price: ${item.price}</p>
+      <button className="button-remove"  onClick={() => removeFromCart(item.id)}>
+        Remove<FontAwesomeIcon className="icon-button-remove" icon={faXmark} />
       </button>
     </div>
   );
