@@ -23,7 +23,8 @@ const Cart = ({ cartItems, removeFromCart, handleAddToCart, products }) => {
           />
         ))}
       </div>
-      <div className="cart-total">Total Price: ${total.toFixed(2)}</div>
+      <div className="cart-title">Total Price: ${total.toFixed(2)}</div>
+      <br />
     </div>
   );
 };
