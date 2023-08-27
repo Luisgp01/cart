@@ -10,7 +10,8 @@ import ContactModal from "../Component/Modal/ContactModal";
 
 function HomePage() {
 
-  const [cartCount, addCartCount] = useState(0);
+  const [cartItems, addCartItems] = useState([]);
+  
 
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
@@ -45,13 +46,13 @@ function HomePage() {
     setIsRegisterModalOpen(!isRegisterModalOpen);
   };
 
-  const handleCount = () => {
-    addCartCount(cartCount + 1);
+  const handleCount = (item) => {
+    const productsToAdd = [...cartItems,item]
+
+    addCartItems(productsToAdd);
+    console.log(productsToAdd);
   };
 
-  const addToCart = () => {
-    addCartCount(addToCart + 1);
-  }
 
 
   return (
@@ -60,7 +61,7 @@ function HomePage() {
         openLoginModal={openLoginModal}
         openRegisterModal={openRegisterModal}
         openContactModal={openContactModal}
-        cartCount={cartCount}
+        cartItems={cartItems}
       />
       <LoginModal
         isOpen={isLoginModalOpen}
@@ -84,7 +85,7 @@ function HomePage() {
       <div>
         <h5 className="flash">Rapid Sales</h5>
         <hr />
-        <Products handleCount={handleCount} addToCart={addToCart} />
+        <Products handleCount={handleCount}  />
       </div>
       <hr />
       <div className="cardin">

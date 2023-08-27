@@ -1,7 +1,7 @@
 import React from "react";
 import Product from "./Product";
 
-const ProductList = ({ addToCart }) => {
+const ProductList = ({ handleAddToCart }) => {
   
   const products = [
     { id: 1, name: "Headphones", price: 11.5 },
@@ -16,7 +16,7 @@ const ProductList = ({ addToCart }) => {
         <Product
           key={product.id}
           product={product}
-          addToCart={() => addToCart(product)}
+          handleAddToCart={() => handleAddToCart(product)}
         />
       ))}
     </div>

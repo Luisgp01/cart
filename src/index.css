@@ -705,6 +705,7 @@ top:2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 
+
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   grid-template-rows: 27px 0;
@@ -728,18 +729,6 @@ top:2rem;
   justify-content:space-around;
   display: flex;
   color: #0A2E36;
-}
-
-.table{
-  border: round;
-  display: flex;
-}
-
-.table-price{
-  position: relative;
-  top: 2.1rem;
-  right: 6rem;
-  font-size: 0.8rem;
 }
 
 .button-remove {
@@ -769,16 +758,6 @@ top:2rem;
 
 .button-remove:hover{
     background-color: #9EA3B0;
-}
-
-table,
-th,
-td {
-  border: 0.1rem solid;
-}
-
-.tableBg{
-  border: solid;
 }
 
 .flash{

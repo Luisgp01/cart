@@ -11,7 +11,8 @@ import Image4 from "../../img/card4.jpg";
 
 
 
-export default function Product({ handleCount, handleAddToCart }) {
+
+export default function Product({ handleCount }) {
 
   const cardHome = [
     {
@@ -21,7 +22,7 @@ export default function Product({ handleCount, handleAddToCart }) {
         "Quisque dictum tincidunt interdum. Vestibulum maximus lacus sit amet libero semper porta. Vestibulum vitae massa tellus. Duis ultrices sagittis porta. Morbi quis ligula ante",
       image: Image,
       button: "Add Cart",
-      price: "€11.50",
+      price: "11.50",
     },
     {
       id: 2,
@@ -30,7 +31,7 @@ export default function Product({ handleCount, handleAddToCart }) {
         "Quisque dictum tincidunt interdum. Vestibulum maximus lacus sit amet libero semper porta. Vestibulum vitae massa tellus. Duis ultrices sagittis porta. Morbi quis ligula ante",
       image: Picture,
       button: "Add Cart",
-      price: "€7.50",
+      price: "7.50",
     },
 
     {
@@ -40,7 +41,7 @@ export default function Product({ handleCount, handleAddToCart }) {
         "Quisque dictum tincidunt interdum. Vestibulum maximus lacus sit amet libero semper porta. Vestibulum vitae massa tellus. Duis ultrices sagittis porta. Morbi quis ligula ante",
       image: Image3,
       button: "Add Cart",
-      price: "€12.00",
+      price: "12.00",
     },
     {
       id: 4,
@@ -49,15 +50,16 @@ export default function Product({ handleCount, handleAddToCart }) {
         "Quisque dictum tincidunt interdum. Vestibulum maximus lacus sit amet libero semper porta. Vestibulum vitae massa tellus. Duis ultrices sagittis porta. Morbi quis ligula ante",
       image: Image4,
       button: "Add Cart",
-      price: "€20.00",
+      price: "20.00",
     },
   ];
 
   const handleOnClick = (item) => {
-    console.log(item)
-    handleCount();
-    handleAddToCart();
+    // console.log("handleAddToCart:", handleAddToCart)
+    handleCount(item);
+   
   };
+
 
   return (
     <div className="productCard">
@@ -73,8 +75,8 @@ export default function Product({ handleCount, handleAddToCart }) {
               <div className="text-black text-sm cardText">
                 {item.texto}
                 <div className="price">{item.price}</div>
-                <a
-                  href="/"
+                <button
+                  
                   className="btn btnDir text-button-card"
                   onClick={() => handleOnClick(item)}
                 >
@@ -84,7 +86,7 @@ export default function Product({ handleCount, handleAddToCart }) {
                     icon={faCartShopping}
                     bounce
                   />
-                </a>
+                </button>
               </div>
             </div>
           </div>

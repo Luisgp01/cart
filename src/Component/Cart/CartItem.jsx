@@ -5,12 +5,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const CartItem = ({ item, removeFromCart, products }) => {
-  const product = products.find((product) => product.id === item.id);
+  // const product = products.find((product) => product.id === item.id);
 
   return (
     <div>
       <div className="cartImg">
-        <img src={product.image} alt="" />
+        <img src={item.image} alt="" />
       </div>
       <h5 className="cartText">{item.name}</h5>
       <p className="cartText">Price: ${item.price}</p>

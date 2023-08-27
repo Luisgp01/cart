@@ -4,7 +4,7 @@ import CartItem from "./CartItem";
 
 const Cart = ({ cartItems, removeFromCart, handleAddToCart, products }) => {
 
- const total = cartItems.reduce((sum, item) => sum + item.price, 0);
+ const total = cartItems.reduce((sum, item) => sum + parseInt(item.price), 0);
 
   return (
     <div>
@@ -17,7 +17,7 @@ const Cart = ({ cartItems, removeFromCart, handleAddToCart, products }) => {
           <CartItem
             key={item.id}
             item={item}
-            products={products}
+            // products={products}
             removeFromCart={removeFromCart}
             handleAddToCart={handleAddToCart}
           />
