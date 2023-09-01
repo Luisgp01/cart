@@ -62,7 +62,7 @@ export default function Product({ handleCount }) {
 
 
   return (
-    <div className="productCard">
+    <div className="flex flex-wrap justify-between">
       {cardHome.map((item, index) => (
         <div key={index} className="card  m-5">
           <img src={item.image} alt="" />

@@ -24,9 +24,9 @@ export default function CardInfo() {
     ];
 
   return (
-    <div className="cardInfo">
+    <div className="flex flex-wrap justify-evenly">
       {cardData.map((item, index) => (
-        <div key={index}>
+        <div key={index} className="p-4">
           <a
             href="/"
             className="flex flex-col items-center-sm bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
@@ -41,7 +41,7 @@ export default function CardInfo() {
                 <p>{item.title}</p>
               </h5>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-               {item.text}
+                {item.text}
               </p>
             </div>
           </a>

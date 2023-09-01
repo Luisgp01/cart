@@ -10,9 +10,9 @@ import {
   faStore,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Modal = ({ openLoginModal, openRegisterModal, openContactModal, cartItems }) => {
+const Navbar = ({ openLoginModal, openRegisterModal, openContactModal, cartItems }) => {
   return (
-    <nav className="navBar">
+    <nav className="bg-gray-800">
       <a className="active" href="#Home" alt="image">
         <FontAwesomeIcon className="fa-fade" icon={faStore} />
         Store
@@ -31,11 +31,11 @@ const Modal = ({ openLoginModal, openRegisterModal, openContactModal, cartItems 
         <FontAwesomeIcon className="icon-navbar" icon={faMessage} />
       </button>
 
-      <div className="relative flex items-center">
+      <div>
         <Link
           className="mr-4 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
           to="/cart"
-          state={{ items:cartItems }}
+          state={{ items: cartItems }}
         >
           <span className="[&>svg]:w-5">
             <svg
@@ -56,4 +56,4 @@ const Modal = ({ openLoginModal, openRegisterModal, openContactModal, cartItems 
   );
 };
 
-export default Modal;
+export default Navbar;

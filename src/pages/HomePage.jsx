@@ -3,7 +3,7 @@ import Products from "../Component/Products/Product";
 import Footer from "../Component/Footer/Footer";
 import Gallery from "../Component/Gallery/Gallery";
 import CardInfo from "../Component/Card/CardInfo";
-import Modal from "../Component/Modal/Modal";
+import Navbar from "../Component/Modal/Navbar";
 import LoginModal from "../Component/Modal/LoginModal";
 import RegisterModal from "../Component/Modal/RegisterModal";
 import ContactModal from "../Component/Modal/ContactModal";
@@ -57,7 +57,7 @@ function HomePage() {
 
   return (
     <div>
-      <Modal
+      <Navbar
         openLoginModal={openLoginModal}
         openRegisterModal={openRegisterModal}
         openContactModal={openContactModal}
@@ -78,23 +78,23 @@ function HomePage() {
         closeModal={closeContactModal}
       />
       <br />
-      <div>
+      <div className="container   mx-auto px-4">
         <Gallery />
       </div>
       <br />
-      <div>
-        <h5 className="flash">Rapid Sales</h5>
+      <div className="container  mx-auto ">
+        <h2 className="text-center text-2xl uppercase">Rapid Sales</h2>
         <hr />
-        <Products handleCount={handleCount}  />
+        <Products handleCount={handleCount} />
       </div>
       <hr />
-      <div className="cardin">
-        <CardInfo className="absolute" />
+      <div className="px-4">
+        <CardInfo />
       </div>
 
       <br />
       <br />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
