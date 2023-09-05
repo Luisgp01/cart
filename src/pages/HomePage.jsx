@@ -94,7 +94,7 @@ function HomePage() {
 
       <br />
       <br />
-      {/* <Footer /> */}
+   <Footer /> 
     </div>
   );
 }
